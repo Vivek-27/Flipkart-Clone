@@ -60,8 +60,7 @@ const ViewAllButton = styled(Button)(({ theme }) => ({
   fontSize: '13px',
   fontWeight: 600,
   [theme.breakpoints.down('sm')]: {
-    fontSize: '11px',
-    padding: '6px 13px'
+    fontSize: '11px'
   }
 }));
 
