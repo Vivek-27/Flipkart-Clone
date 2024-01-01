@@ -10,10 +10,13 @@ import Slide from './Slide';
 import MidSlide from './MidSlide';
 import MidSection from './MidSection';
 
-const Component = styled(Box)`
-  padding: 10px 10px;
-  background: #f2f2f2;
-`;
+const Component = styled(Box)(({ theme }) => ({
+  padding: '10px 10px',
+  background: ' #f2f2f2',
+  [theme.breakpoints.down('sm')]: {
+    padding: '10px 0px'
+  }
+}));
 
 const Home = () => {
   const { products } = useSelector((state) => state.getProducts);

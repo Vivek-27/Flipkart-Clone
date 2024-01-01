@@ -1,5 +1,4 @@
-import styled from '@emotion/styled';
-import { Box, Typography, Divider, Button } from '@mui/material';
+import { Box, Typography, Divider, Button, styled } from '@mui/material';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -38,20 +37,30 @@ const Timer = styled(Box)`
   color: #7f7f7f;
 `;
 
-const DealText = styled(Typography)`
-  font-size: 22px;
-  font-weight: 600;
-  margin-right: 25px;
-  line-height: 32px;
-`;
+const DealText = styled(Typography)(({ theme }) => ({
+  fontSize: ' 22px',
+  fontWeight: 600,
+  marginRight: '25px',
+  lineHeight: '32px',
+  [theme.breakpoints.down('sm')]: {
+    fontSize: ' 16px',
+    fontWeight: 600,
+    marginRight: '5px',
+    lineHeight: '22px'
+  }
+}));
 
-const ViewAllButton = styled(Button)`
-  margin-left: auto;
-  background-color: #2874f0;
-  border-radius: 2px;
-  font-size: 13px;
-  font-weight: 600;
-`;
+const ViewAllButton = styled(Button)(({ theme }) => ({
+  marginLeft: 'auto',
+  backgroundColor: '#2874f0',
+  borderRadius: '2px',
+  fontSize: '13px',
+  fontWeight: 600,
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '11px',
+    padding: '6px 13px'
+  }
+}));
 
 const Image = styled('img')({
   width: 'auto',

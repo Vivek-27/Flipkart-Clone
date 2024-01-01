@@ -37,7 +37,7 @@ const SubHeading = styled(Typography)(({ theme }) => ({
   fontSize: '10px',
   fontStyle: 'italic',
   [theme.breakpoints.down('sm')]: {
-    fontSize: '8px'
+    fontSize: '9px'
   }
 }));
 
