@@ -425,9 +425,8 @@ export const products = [
   },
   {
     id: 'product26',
-    url: 'https://static.tp-link.com/HS100(UK)-packaging_large_1537152153775g.png',
-    detailUrl:
-      'https://static.tp-link.com/HS100(UK)-packaging_large_1537152153775g.png',
+    url: 'https://s.tekshop247.com/131954-large_default/tp-link-kp105-smart-plug.jpg',
+    detailUrl:'https://s.tekshop247.com/131954-large_default/tp-link-kp105-smart-plug.jpg',
     title: {
       shortTitle: 'Smart Plugs',
       longTitle: 'TP-Link Kasa Smart Wi-Fi Plug'
@@ -767,6 +766,7 @@ export const products = [
     id: 'product43',
     url: 'https://media.croma.com/image/upload/v1664601847/Croma%20Assets/Communication/Mobiles/Images/262639_6_zepm0a.png',
     detailUrl:
+      'https://media.croma.com/image/upload/v1664601847/Croma%20Assets/Communication/Mobiles/Images/262639_6_zepm0a.png',
       'https://media.croma.com/image/upload/v1664601847/Croma%20Assets/Communication/Mobiles/Images/262639_6_zepm0a.png',
     title: {
       shortTitle: 'iPhone 11 Pro',
