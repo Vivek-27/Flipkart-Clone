@@ -12,7 +12,7 @@ const Heading = styled(Typography)`
 `;
 
 const Container = styled(Box)`
-  padding: 15p 24px;
+  padding: 15px 24px;
   background: #fff;
   & > p {
     margin-bottom: 20px;
