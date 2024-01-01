@@ -24,6 +24,8 @@ const Home = () => {
     dispatch(getProducts());
   }, [dispatch]);
 
+  console.log(products);
+
   return (
     <>
       <Navbar />
