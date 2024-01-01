@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'https://flipkart-um5t.onrender.com/';
+const URL = 'https://flipkart-um5t.onrender.com';
 
 export const authenticateSignup = async (data) => {
   try {
