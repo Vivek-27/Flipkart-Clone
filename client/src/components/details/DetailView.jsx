@@ -26,12 +26,17 @@ const RightContainer = styled(Grid)`
 
 const DetailView = () => {
   const { id } = useParams();
-  const { loading, product } = useSelector((state) => state.getProductDetails);
+  let { loading, product } = useSelector((state) => state.getProductDetails);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (product && id !== product.id) dispatch(getProductDetails(id));
-  }, [dispatch, id, product, loading]);
+  // useEffect(() => {
+  //   if (product && id !== product.id) dispatch(getProductDetails(id));
+  // }, [dispatch, id, product, loading]);
+
+  product.map((item) => {
+    if (item.id === id) product = item;
+    return 0;
+  });
 
   return (
     <Component>
