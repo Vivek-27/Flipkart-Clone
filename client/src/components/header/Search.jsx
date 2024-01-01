@@ -4,13 +4,16 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../../redux/actions/productAction';
 import { Link } from 'react-router-dom';
-const SearchContainer = styled(Box)`
-  background: #fff;
-  width: 38%;
-  border-radius: 2px;
-  margin-left: 10px;
-  display: flex;
-`;
+const SearchContainer = styled(Box)(({ theme }) => ({
+  background: '#fff',
+  width: '38%',
+  borderRadius: '2px',
+  marginLeft: '10px',
+  display: 'flex',
+  [theme.breakpoints.down('sm')]: {
+    width: '100%'
+  }
+}));
 const InputSearchBase = styled(InputBase)`
   padding-left: 20px;
   width: 100%;

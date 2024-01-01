@@ -9,7 +9,7 @@ const Image = styled('img')(({ theme }) => ({
   height: 280,
   objectFit: 'cover',
   [theme.breakpoints.down('md')]: {
-    height: 180
+    height: 150
   }
 }));
 

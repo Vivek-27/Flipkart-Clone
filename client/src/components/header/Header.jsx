@@ -18,22 +18,28 @@ import Search from './Search';
 import CustomButtons from './CustomButtons';
 import { Link } from 'react-router-dom';
 
-const StyledHeader = styled(AppBar)`
-  background: #2874f0;
-  height: '65px';
-`;
+const StyledHeader = styled(AppBar)(({ theme }) => ({
+  background: '#2874f0',
+  height: '65px'
+}));
 
-const Component = styled(Link)`
-  margin-left: 12%;
-  line-height: 0;
-  text-decoration: none;
-  color: inherit;
-`;
+const Component = styled(Link)(({ theme }) => ({
+  marginLeft: '12%',
+  lineHeight: 0,
+  textDecoration: 'none',
+  color: 'inherit',
+  [theme.breakpoints.down('sm')]: {
+    marginLeft: 5
+  }
+}));
 
-const SubHeading = styled(Typography)`
-  font-size: 10px;
-  font-style: italic;
-`;
+const SubHeading = styled(Typography)(({ theme }) => ({
+  fontSize: '10px',
+  fontStyle: 'italic',
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '8px'
+  }
+}));
 
 const CustomButtonWrapper = styled(Box)(({ theme }) => ({
   margin: '0 5% 0 auto',
@@ -85,7 +91,7 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <Toolbar style={{ minHeight: 55 }}>
+      <Toolbar style={{ minHeight: 65 }}>
         <MenuButton color="inherit" onClick={handleOpen}>
           <Menu />
         </MenuButton>
