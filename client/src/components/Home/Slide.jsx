@@ -30,12 +30,15 @@ const Deal = styled(Box)`
   display: flex;
 `;
 
-const Timer = styled(Box)`
-  display: flex;
-  margin-left: 10px;
-  align-items: center;
-  color: #7f7f7f;
-`;
+const Timer = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  marginLeft: '10px',
+  alignItems: 'center',
+  color: ' #7f7f7f',
+  [theme.breakpoints.down('sm')]: {
+    display: 'none'
+  }
+}));
 
 const DealText = styled(Typography)(({ theme }) => ({
   fontSize: ' 22px',
